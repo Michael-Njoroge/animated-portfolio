@@ -131,4 +131,74 @@ trBtn.onclick = function(){
     }
 };
 
+blBtn.onclick = function(){
+    if(activeCorner === "bottom-left"){
+        playCloseAnimation("reverse-animate-bottom-left");
+    }else{
+        tlBtn.innerHTML === "About";
+        trBtn.innerHTML === "Experince";
+        tlBtn.innerHTML === "Contact";
+
+        //Setting the active corner
+        activeCorner = "bottom-left";
+        trBtn.innerHTML = "&uarr;<br/>Projects";
+
+        handleWindowResize();
+        playAnimation("animate-bottom-left","reverse-animate-bottom-left");
+
+        //Change background colors
+        trBtn.style.background = bgColor;
+        brBtn.style.background = bgColor;
+        blBtn.style.background = bgColorAlt;
+        tlBtn.style.background = bgColor;
+
+        // Change text clors
+        trBtn.style.color = textColor;
+        brBtn.style.color = textColor;
+        blBtn.style.color = textColorAlt;
+        tlBtn.style.color = textColor;
+
+        //Change positions of corner content
+        trBtn.style.Transform = tlHidden;
+        brBtn.style.Transform = brHidden;
+        blBtn.style.Transform = blActive;
+        tlBtn.style.Transform = tlHidden;
+    }
+};
+
+brBtn.onclick = function(){
+    if(activeCorner === "bottom-right"){
+        playCloseAnimation("reverse-animate-bottom-right");
+    }else{
+        tlBtn.innerHTML === "About";
+        trBtn.innerHTML === "Experince";
+        blBtn.innerHTML === "Projects";
+
+        //Setting the active corner
+        activeCorner = "bottom-right";
+        trBtn.innerHTML = "&uarr;<br/>Contact";
+
+        handleWindowResize();
+        playAnimation("animate-bottom-right","reverse-animate-bottom-right");
+
+        //Change background colors
+        trBtn.style.background = bgColor;
+        brBtn.style.background = bgColorAlt;
+        blBtn.style.background = bgColor;
+        tlBtn.style.background = bgColor;
+
+        // Change text clors
+        trBtn.style.color = textColor;
+        brBtn.style.color = textColorAlt;
+        blBtn.style.color = textColor;
+        tlBtn.style.color = textColor;
+
+        //Change positions of corner content
+        trBtn.style.Transform = tlHidden;
+        brBtn.style.Transform = brActive;
+        blBtn.style.Transform = blHidden;
+        tlBtn.style.Transform = tlHidden;
+    }
+};
+
 
