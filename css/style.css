@@ -124,8 +124,46 @@ h1,h2,h5,p{
     width: 30vw;
     top: 10vh;
     left: 0;
+    /* transform: translateX(-100vw) translateY(-100vh); */
 }
 
-#article{
-    background: red;
+article{
+    background: rgb(245, 245, 245);
+    font-size: 0.8rem;
+    list-style: none;
+    border: var(--border);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    width: 8.75rem;
+    min-width: 8.75rem;
+}
+
+article h2{
+    font-size: 1rem;
+    padding: 0.3rem;
+}
+
+article p{
+    padding-bottom: 0.3rem;
+}
+
+article h2,
+article p{
+    color: #333;
+}
+
+.cards{
+    padding: 0;
+}
+
+.cards_content{
+    display: flex;
+    align-items: center;
+}
+
+.cards_content_text{
+    color: var(--text);
+    text-align: center;
+    margin: 0 1rem;
 }
