@@ -65,8 +65,11 @@ function playCloseAnimation(animation, reverseAnimation){
 //onclick corner button function
 tlBtn.onclick = function(){
     if(activeCorner === "top-left"){
-        playCloseAnimation()
+        playCloseAnimation("reverse-animate-top-left");
     }else{
+        trBtn.innerHTML === "Experience";
+        blBtn.innerHTML === "Projects";
+        tlBtn.innerHTML === "Contact";
         //Setting the active corner
         activeCorner = "top-left";
         tlBtn.innerHTML = "&uarr;<br/>About";
@@ -91,6 +94,40 @@ tlBtn.onclick = function(){
         brBtn.style.Transform = brHidden;
         blBtn.style.Transform = blHidden;
         tlBtn.style.Transform = tlActive;
+    }
+};
+
+trBtn.onclick = function(){
+    if(activeCorner === "top-right"){
+        playCloseAnimation("reverse-animate-top-right");
+    }else{
+        tlBtn.innerHTML === "About";
+        blBtn.innerHTML === "Projects";
+        tlBtn.innerHTML === "Contact";
+        //Setting the active corner
+        activeCorner = "top-right";
+        trBtn.innerHTML = "&uarr;<br/>Experience";
+
+        handleWindowResize();
+        playAnimation("animate-top-right","reverse-animate-top-right");
+
+        //Change background colors
+        trBtn.style.background = bgColorAlt;
+        brBtn.style.background = bgColor;
+        blBtn.style.background = bgColor;
+        tlBtn.style.background = bgColor;
+
+        // Change text clors
+        trBtn.style.color = textColorAlt;
+        brBtn.style.color = textColor;
+        blBtn.style.color = textColor;
+        tlBtn.style.color = textColor;
+
+        //Change positions of corner content
+        trBtn.style.Transform = tlActive;
+        brBtn.style.Transform = brHidden;
+        blBtn.style.Transform = blHidden;
+        tlBtn.style.Transform = tlHidden;
     }
 };
 
