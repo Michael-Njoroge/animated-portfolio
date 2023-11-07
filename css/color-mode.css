@@ -43,13 +43,12 @@
 
 :root.dark-mode{
     /* colors */
-    --bg: #21202124;
-    --bg-alt: #3c3d40;
-    --bg-alt-2: #333;
-    --bg-transparent:#333333;
-    --border: 0.01rem solid #5a5a5a;
-    --text: #333;
-    --text-alt: #fff;
+  --bg: #202124;
+  --bg-alt: #3c3d40;
+  --bg-alt-2: #333;
+  --bg-transparent: #333333f5;
+  --border: 0.01rem solid #5a5a5a;
+  --text: #fff;
  
     --tl-1: url(../assets/face-animation-dark/tlw-1.png);
     --tl-2: url(../assets/face-animation-dark/tlw-2.png);
@@ -104,6 +103,6 @@
     background-image: var(--moon);
 }
 
-.dark-mode #toogle-button{
+.dark-mode #color-mode{
     justify-content: flex-end;
 }
