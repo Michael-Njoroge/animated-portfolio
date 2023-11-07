@@ -37,3 +37,61 @@ let blHidden = "translateX(-100vw) translateY(100vh)";
 
 let brActive = "translateX(-5vw) translateY(0)";
 let brHidden = "translateX(100vw) translateY(100vh)";
+
+//Define which corner is open
+let activeCorner = "";
+
+//Add an event listener to the window object to listen for the resize
+window.addEventListener("resize",handleWindowResize);
+
+//Function handling the styling when resizing the window
+function handleWindowResize(){
+
+}
+
+//Store the last reverse animation,ready to be played
+let lastReversedAnimation = "";
+
+//Play animation 
+
+function playAnimation(animation, reverseAnimation){
+
+}
+
+function playCloseAnimation(animation, reverseAnimation){
+    
+}
+
+//onclick corner button function
+tlBtn.onclick = function(){
+    if(activeCorner === "top-left"){
+        playCloseAnimation()
+    }else{
+        //Setting the active corner
+        activeCorner = "top-left";
+        tlBtn.innerHTML = "&uarr;<br/>About";
+
+        handleWindowResize();
+        playAnimation("animate-top-left","reverse-animate-top-left");
+
+        //Change background colors
+        trBtn.style.background = bgColor;
+        brBtn.style.background = bgColor;
+        blBtn.style.background = bgColor;
+        tlBtn.style.background = bgColorAlt;
+
+        // Change text clors
+        trBtn.style.color = textColor;
+        brBtn.style.color = textColor;
+        blBtn.style.color = textColor;
+        tlBtn.style.color = textColorAlt;
+
+        //Change positions of corner content
+        trBtn.style.Transform = trHidden;
+        brBtn.style.Transform = brHidden;
+        blBtn.style.Transform = blHidden;
+        tlBtn.style.Transform = tlActive;
+    }
+};
+
+
