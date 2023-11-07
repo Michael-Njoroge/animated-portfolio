@@ -3,4 +3,7 @@
 :root{
     /* colors */
     --bg: #ffffff;
+
+    /* face animation */
+    --tl-1: url(../assets/face-animation-light/tl-1.png);
 }
