@@ -3,7 +3,39 @@
 :root{
     /* colors */
     --bg: #ffffff;
+    --bg-alt: #333;
+    --bg-alt-2: #f0f0f0;
+    --bg-transparent:#ffffffe8;
+    --border: 0.01rem solid #333;
+    --text: #333;
+    --text-alt: #fff;
 
     /* face animation */
     --tl-1: url(../assets/face-animation-light/tl-1.png);
+    --tl-2: url(../assets/face-animation-light/tl-2.png);
+    --tl-3: url(../assets/face-animation-light/tl-3.png);
+    --tl-4: url(../assets/face-animation-light/tl-4.png);
+    --tl-5: url(../assets/face-animation-light/tl-5.png);
+    
+}
+/* Color Mode Toggle */
+#color-mode{
+    background: var(--bg-alt-2);
+    height: 2.75rem;
+    background-color: red;
+    width: 4rem;
+    border-radius: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#toggle-button{
+    background-image: var(--sun);
+    background-size: cover;
+    cursor: pointer;
 }
