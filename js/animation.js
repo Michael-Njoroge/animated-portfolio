@@ -26,3 +26,14 @@ const bgColorAlt = "var(--bg-alt)";
 const textColor = "var(--text)";
 const textColorAlt = "var(--text-alt)";
 
+let tlActive = "translateX(5vw) translateY(0)";
+let tlHidden = "translateX(-100vw) translateY(-100vh)";
+
+let trActive = "translateX(-5vw) translateY(0)";
+let trHidden = "translateX(-100vw) translateY(100vh)";
+
+let blActive = "translateX(10vw) translateY(7vh)";
+let blHidden = "translateX(-100vw) translateY(100vh)";
+
+let brActive = "translateX(-5vw) translateY(0)";
+let brHidden = "translateX(100vw) translateY(100vh)";

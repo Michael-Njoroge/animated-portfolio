@@ -124,7 +124,7 @@ h1,h2,h5,p{
     width: 30vw;
     top: 10vh;
     left: 0;
-    /* transform: translateX(-100vw) translateY(-100vh); */
+    transform: translateX(-100vw) translateY(-100vh);
 }
 
 article{
