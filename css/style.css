@@ -48,3 +48,84 @@ h1,h2,h5,p{
     background-position: center;
     background-size: cover;
 }
+
+/* Cards styles */
+
+#grid{
+    position: absolute;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    width: 100%;
+}
+
+#grid_tl_btn,
+#grid_tr_btn,
+#grid_bl_btn,
+#grid_br_btn{
+    height: 18.75rem;
+    width: 18.75rem;
+    background: var(--bg);
+    color: var(--text);
+    border: var(--border);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    z-index: 100;
+    border-radius: 40%;
+    transition: transform 0.2s ease-in-out;
+}
+
+#grid_tl_content,
+#grid_tr_content,
+#grid_bl_content,
+#grid_br_content{
+    position: absolute;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    color: var(--text-alt);
+}
+
+#grid_tl_btn,
+#grid_tr_btn{
+    align-items: flex-end;
+    padding-bottom: 0.5rem;
+}
+
+#grid_bl_btn,
+#grid_br_btn{
+    align-items: flex-end;
+    padding-top: 0.5rem;
+}
+
+#grid_tl_btn:active,
+#grid_br_btn:active{
+    transform: rotate(-45deg) scale(1.05);
+}
+
+#grid_bl_btn:active,
+#grid_br_btn:active{
+    transform: rotate(45deg) scale(1.05);
+}
+
+/* Top left corner */
+#grid_tl_btn{
+    top: -11.5rem;
+    left: -11.5rem;
+    transform: rotate(-45deg);
+}
+
+#grid_tl_content{
+    width: 30vw;
+    top: 10vh;
+    left: 0;
+}
+
+#article{
+    background: red;
+}
