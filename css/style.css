@@ -58,6 +58,7 @@ h1,h2,h5,p{
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     width: 100%;
+    overflow: hidden;
 }
 
 #grid_tl_btn,
@@ -180,7 +181,7 @@ article p{
     width: 30vw;
     top: 10vh; 
     right: 0;
-    /* transform: translateX(100vw) translateY(-100vh); */
+    transform: translateX(100vw) translateY(-100vh);
 }
 
 .experience{
@@ -225,4 +226,6 @@ article p{
 .experience_skills div div{
   justify-content: space-between;
 }
+
+/* Bottom left corner */
 

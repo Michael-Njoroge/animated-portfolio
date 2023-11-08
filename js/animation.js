@@ -2,17 +2,17 @@
 const heroImage = document.querySelector("#hero_animation_img");
 
 const tl = document.querySelector("#grid_tl");
-// const tr = document.querySelector("#grid_tr");
+const tr = document.querySelector("#grid_tr");
 // const bl = document.querySelector("#grid_bl");
 // const br = document.querySelector("#grid_br");
 
 const tlBtn = document.querySelector("#grid_tl_btn");
-// const trBtn = document.querySelector("#grid_tr_btn");
+const trBtn = document.querySelector("#grid_tr_btn");
 // const blBtn = document.querySelector("#grid_bl_btn");
 // const brBtn = document.querySelector("#grid_br_btn");
 
 const tlContent = document.querySelector("#grid_tl_content");
-// const trContent = document.querySelector("#grid_tr_content");
+const trContent = document.querySelector("#grid_tr_content");
 // const blContent = document.querySelector("#grid_bl_content");
 // const brContent = document.querySelector("#grid_br_content");
 
@@ -60,7 +60,7 @@ function handleWindowResize(){
                 tlContent.style.background = "var(--bg-transparent)";
                 tlContent.style.zIndex = "200";
                 tlBtn.style.zIndex = "300";
-                // trBtn.style.zIndex = "100";
+                trBtn.style.zIndex = "100";
                 // blBtn.style.zIndex = "100";
                 // brBtn.style.zIndex = "100";
             }else{
@@ -72,7 +72,31 @@ function handleWindowResize(){
                 tlContent.style.display = "block";
             }
             break;
+
         case "top-right":
+            if(window.innerWidth <= 1100){
+                trActive = "translateX(0) translateY(0)";
+                trContent.style.transform = "translateX(0) translateY(0)";
+                trContent.style.width = "100vw";
+                trContent.style.height = "100vh";
+                trContent.style.top = "0";
+                trContent.style.display = "flex";
+                trContent.style.alignItems = "center";
+                trContent.style.justifyContent = "center";
+                trContent.style.background = "var(--bg-transparent)";
+                trContent.style.zIndex = "200";
+                trBtn.style.zIndex = "300";
+                tlBtn.style.zIndex = "100";
+                // blBtn.style.zIndex = "100";
+                // brBtn.style.zIndex = "100";
+            }else{
+                trActive = "translateX(-5vw) translateY(0)";
+                trContent.style.transform = "translateX(-5vw) translateY(0)";
+                trContent.style.width = "30vw";
+                trContent.style.height = "0";
+                trContent.style.top = "10vh";
+                trContent.style.display = "block";
+            }
             break;
         case "bottom-left":
             break;
@@ -88,7 +112,6 @@ function handleWindowResize(){
 let lastReversedAnimation = "";
 
 //Play animation 
-
 function playAnimation(animation, reverseAnimation){
     //Remove all animation from heroImage
     heroImage.className = "";
@@ -109,7 +132,7 @@ function playAnimation(animation, reverseAnimation){
 
 function playCloseAnimation(animation, reverseAnimation){
     tlBtn.innerHTML = "About";
-    // trBtn.innerHTML = "Experience";
+    trBtn.innerHTML = "Experience";
     // blBtn.innerHTML = "Projects";
     // brBtn.innerHTML = "Contact";
 
@@ -119,8 +142,8 @@ function playCloseAnimation(animation, reverseAnimation){
             tlBtn.style.color = textColor;
             tlContent.style.transform = tlHidden;
             break;
-            // case "top-right":
-            //     tlBtn.style.background = bgColor;
+            case "top-right":
+                tlBtn.style.background = bgColor;
             //     tlBtn.style.color = textColor;
             //     tlContent.style.transform = tlHidden;
             //     break;
