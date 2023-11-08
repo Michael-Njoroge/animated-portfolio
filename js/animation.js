@@ -2,23 +2,23 @@
 const heroImage = document.querySelector("#hero_animation_img");
 
 const tl = document.querySelector("#grid_tl");
-const tr = document.querySelector("#grid_tr");
-const bl = document.querySelector("#grid_bl");
-const br = document.querySelector("#grid_br");
+// const tr = document.querySelector("#grid_tr");
+// const bl = document.querySelector("#grid_bl");
+// const br = document.querySelector("#grid_br");
 
 const tlBtn = document.querySelector("#grid_tl_btn");
-const trBtn = document.querySelector("#grid_tr_btn");
-const blBtn = document.querySelector("#grid_bl_btn");
-const brBtn = document.querySelector("#grid_br_btn");
+// const trBtn = document.querySelector("#grid_tr_btn");
+// const blBtn = document.querySelector("#grid_bl_btn");
+// const brBtn = document.querySelector("#grid_br_btn");
 
-const tlContent = document.querySelector("#grid_tl_Content");
-const trContent = document.querySelector("#grid_tr_Content");
-const blContent = document.querySelector("#grid_bl_Content");
-const brContent = document.querySelector("#grid_br_Content");
+const tlContent = document.querySelector("#grid_tl_content");
+// const trContent = document.querySelector("#grid_tr_content");
+// const blContent = document.querySelector("#grid_bl_content");
+// const brContent = document.querySelector("#grid_br_content");
 
-const projectOne = document.querySelector(".p-1");
-const projectTwo = document.querySelector(".p-2");
-const projectThree = document.querySelector(".p-3");
+// const projectOne = document.querySelector(".p-1");
+// const projectTwo = document.querySelector(".p-2");
+// const projectThree = document.querySelector(".p-3");
 
 // Define colors and positions
 const bgColor = "var(--bg)";
@@ -42,12 +42,12 @@ let brHidden = "translateX(100vw) translateY(100vh)";
 let activeCorner = "";
 
 //Add an event listener to the window object to listen for the resize
-window.addEventListener("resize",handleWindowResize);
+// window.addEventListener("resize",handleWindowResize);
 
 //Function handling the styling when resizing the window
-function handleWindowResize(){
+// function handleWindowResize(){
 
-}
+// }
 
 //Store the last reverse animation,ready to be played
 let lastReversedAnimation = "";
@@ -57,7 +57,7 @@ let lastReversedAnimation = "";
 function playAnimation(animation, reverseAnimation){
     //Remove all animation from heroImage
     heroImage.className = "";
-    
+
     if(lastReversedAnimation !== ""){
         //Clicked something therefore reverse animation
         heroImage.classList.add(lastReversedAnimation);
@@ -72,147 +72,147 @@ function playAnimation(animation, reverseAnimation){
     }
 }
 
-function playCloseAnimation(animation, reverseAnimation){
+// function playCloseAnimation(animation, reverseAnimation){
     
-}
+// }
 
 //onclick corner button function
 tlBtn.onclick = function(){
     if(activeCorner === "top-left"){
-        playCloseAnimation("reverse-animate-top-left");
+        // playCloseAnimation("reverse-animate-top-left");
     }else{
-        trBtn.innerHTML === "Experience";
-        blBtn.innerHTML === "Projects";
-        tlBtn.innerHTML === "Contact";
+        // trBtn.innerHTML === "Experience";
+        // blBtn.innerHTML === "Projects";
+        // tlBtn.innerHTML === "Contact";
         //Setting the active corner
         activeCorner = "top-left";
         tlBtn.innerHTML = "&uarr;<br/>About";
 
-        handleWindowResize();
+        // handleWindowResize();
         playAnimation("animate-top-left","reverse-animate-top-left");
 
         //Change background colors
-        trBtn.style.background = bgColor;
-        brBtn.style.background = bgColor;
-        blBtn.style.background = bgColor;
+        // trBtn.style.background = bgColor;
+        // brBtn.style.background = bgColor;
+        // blBtn.style.background = bgColor;
         tlBtn.style.background = bgColorAlt;
 
         // Change text clors
-        trBtn.style.color = textColor;
-        brBtn.style.color = textColor;
-        blBtn.style.color = textColor;
+        // trBtn.style.color = textColor;
+        // brBtn.style.color = textColor;
+        // blBtn.style.color = textColor;
         tlBtn.style.color = textColorAlt;
 
         //Change positions of corner content
-        trBtn.style.Transform = trHidden;
-        brBtn.style.Transform = brHidden;
-        blBtn.style.Transform = blHidden;
-        tlBtn.style.Transform = tlActive;
+        // trContent.style.transform = trHidden;
+        // brContent.style.transform = brHidden;
+        // blContent.style.transform = blHidden;
+        tlContent.style.transform = tlActive;
     }
 };
 
-trBtn.onclick = function(){
-    if(activeCorner === "top-right"){
-        playCloseAnimation("reverse-animate-top-right");
-    }else{
-        tlBtn.innerHTML === "About";
-        blBtn.innerHTML === "Projects";
-        tlBtn.innerHTML === "Contact";
-        //Setting the active corner
-        activeCorner = "top-right";
-        trBtn.innerHTML = "&uarr;<br/>Experience";
+// trBtn.onclick = function(){
+//     if(activeCorner === "top-right"){
+//         playCloseAnimation("reverse-animate-top-right");
+//     }else{
+//         tlBtn.innerHTML === "About";
+//         blBtn.innerHTML === "Projects";
+//         tlBtn.innerHTML === "Contact";
+//         //Setting the active corner
+//         activeCorner = "top-right";
+//         trBtn.innerHTML = "&uarr;<br/>Experience";
 
-        handleWindowResize();
-        playAnimation("animate-top-right","reverse-animate-top-right");
+//         handleWindowResize();
+//         playAnimation("animate-top-right","reverse-animate-top-right");
 
-        //Change background colors
-        trBtn.style.background = bgColorAlt;
-        brBtn.style.background = bgColor;
-        blBtn.style.background = bgColor;
-        tlBtn.style.background = bgColor;
+//         //Change background colors
+//         trBtn.style.background = bgColorAlt;
+//         brBtn.style.background = bgColor;
+//         blBtn.style.background = bgColor;
+//         tlBtn.style.background = bgColor;
 
-        // Change text clors
-        trBtn.style.color = textColorAlt;
-        brBtn.style.color = textColor;
-        blBtn.style.color = textColor;
-        tlBtn.style.color = textColor;
+//         // Change text clors
+//         trBtn.style.color = textColorAlt;
+//         brBtn.style.color = textColor;
+//         blBtn.style.color = textColor;
+//         tlBtn.style.color = textColor;
 
-        //Change positions of corner content
-        trBtn.style.Transform = tlActive;
-        brBtn.style.Transform = brHidden;
-        blBtn.style.Transform = blHidden;
-        tlBtn.style.Transform = tlHidden;
-    }
-};
+//         //Change positions of corner content
+//         trBtn.style.Transform = tlActive;
+//         brBtn.style.Transform = brHidden;
+//         blBtn.style.Transform = blHidden;
+//         tlBtn.style.Transform = tlHidden;
+//     }
+// };
 
-blBtn.onclick = function(){
-    if(activeCorner === "bottom-left"){
-        playCloseAnimation("reverse-animate-bottom-left");
-    }else{
-        tlBtn.innerHTML === "About";
-        trBtn.innerHTML === "Experince";
-        tlBtn.innerHTML === "Contact";
+// blBtn.onclick = function(){
+//     if(activeCorner === "bottom-left"){
+//         playCloseAnimation("reverse-animate-bottom-left");
+//     }else{
+//         tlBtn.innerHTML === "About";
+//         trBtn.innerHTML === "Experince";
+//         tlBtn.innerHTML === "Contact";
 
-        //Setting the active corner
-        activeCorner = "bottom-left";
-        trBtn.innerHTML = "Projects<br/>&uarr";
+//         //Setting the active corner
+//         activeCorner = "bottom-left";
+//         trBtn.innerHTML = "Projects<br/>&uarr";
 
-        handleWindowResize();
-        playAnimation("animate-bottom-left","reverse-animate-bottom-left");
+//         handleWindowResize();
+//         playAnimation("animate-bottom-left","reverse-animate-bottom-left");
 
-        //Change background colors
-        trBtn.style.background = bgColor;
-        brBtn.style.background = bgColor;
-        blBtn.style.background = bgColorAlt;
-        tlBtn.style.background = bgColor;
+//         //Change background colors
+//         // trBtn.style.background = bgColor;
+//         // brBtn.style.background = bgColor;
+//         // blBtn.style.background = bgColorAlt;
+//         tlBtn.style.background = bgColor;
 
-        // Change text clors
-        trBtn.style.color = textColor;
-        brBtn.style.color = textColor;
-        blBtn.style.color = textColorAlt;
-        tlBtn.style.color = textColor;
+//         // Change text clors
+//         // trBtn.style.color = textColor;
+//         // brBtn.style.color = textColor;
+//         // blBtn.style.color = textColorAlt;
+//         tlBtn.style.color = textColor;
 
-        //Change positions of corner content
-        trBtn.style.Transform = tlHidden;
-        brBtn.style.Transform = brHidden;
-        blBtn.style.Transform = blActive;
-        tlBtn.style.Transform = tlHidden;
-    }
-};
+//         //Change positions of corner content
+//         // trBtn.style.Transform = tlHidden;
+//         // brBtn.style.Transform = brHidden;
+//         // blBtn.style.Transform = blActive;
+//         tlBtn.style.Transform = tlHidden;
+//     }
+// };
 
-brBtn.onclick = function(){
-    if(activeCorner === "bottom-right"){
-        playCloseAnimation("reverse-animate-bottom-right");
-    }else{
-        tlBtn.innerHTML === "About";
-        trBtn.innerHTML === "Experince";
-        blBtn.innerHTML === "Projects";
+// brBtn.onclick = function(){
+//     if(activeCorner === "bottom-right"){
+//         // playCloseAnimation("reverse-animate-bottom-right");
+//     }else{
+//         // tlBtn.innerHTML === "About";
+//         // trBtn.innerHTML === "Experince";
+//         // blBtn.innerHTML === "Projects";
 
-        //Setting the active corner
-        activeCorner = "bottom-right";
-        trBtn.innerHTML = "Contact<br/>&uarr";
+//         //Setting the active corner
+//         activeCorner = "bottom-right";
+//         trBtn.innerHTML = "Contact<br/>&uarr";
 
-        handleWindowResize();
-        playAnimation("animate-bottom-right","reverse-animate-bottom-right");
+//         handleWindowResize();
+//         playAnimation("animate-bottom-right","reverse-animate-bottom-right");
 
-        //Change background colors
-        trBtn.style.background = bgColor;
-        brBtn.style.background = bgColorAlt;
-        blBtn.style.background = bgColor;
-        tlBtn.style.background = bgColor;
+//         //Change background colors
+//         // trBtn.style.background = bgColor;
+//         // brBtn.style.background = bgColorAlt;
+//         // blBtn.style.background = bgColor;
+//         tlBtn.style.background = bgColor;
 
-        // Change text clors
-        trBtn.style.color = textColor;
-        brBtn.style.color = textColorAlt;
-        blBtn.style.color = textColor;
-        tlBtn.style.color = textColor;
+//         // Change text clors
+//         // trBtn.style.color = textColor;
+//         // brBtn.style.color = textColorAlt;
+//         // blBtn.style.color = textColor;
+//         tlBtn.style.color = textColor;
 
-        //Change positions of corner content
-        trBtn.style.Transform = tlHidden;
-        brBtn.style.Transform = brActive;
-        blBtn.style.Transform = blHidden;
-        tlBtn.style.Transform = tlHidden;
-    }
-};
+//         //Change positions of corner content
+//         // trBtn.style.Transform = tlHidden;
+//         // brBtn.style.Transform = brActive;
+//         // blBtn.style.Transform = blHidden;
+//         tlBtn.style.Transform = tlHidden;
+//     }
+// };
 
 
