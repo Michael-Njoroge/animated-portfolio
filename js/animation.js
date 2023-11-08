@@ -76,7 +76,7 @@ function handleWindowResize(){
         case "top-right":
             if(window.innerWidth <= 1100){
                 trActive = "translateX(0) translateY(0)";
-                trContent.style.transform = "translateX(0vw) translateY(0)";
+                trContent.style.transform = "translateX(0) translateY(0)";
                 trContent.style.width = "100vw";
                 trContent.style.height = "100vh";
                 trContent.style.top = "0";
@@ -240,10 +240,10 @@ trBtn.onclick = function(){
         tlBtn.style.color = textColor;
 
         //Change positions of corner content
-        trBtn.style.Transform = tlActive;
-        // brBtn.style.Transform = brHidden;
-        // blBtn.style.Transform = blHidden;
-        tlBtn.style.Transform = tlHidden;
+        trContent.style.transform = trActive;
+        // brContent.style.transform = brHidden;
+        // blContent.style.transform = blHidden;
+        tlContent.style.transform = tlHidden;
     }
 };
 
@@ -275,12 +275,12 @@ trBtn.onclick = function(){
 //         tlBtn.style.color = textColor;
 
 //         //Change positions of corner content
-//         // trBtn.style.Transform = tlHidden;
-//         // brBtn.style.Transform = brHidden;
-//         // blBtn.style.Transform = blActive;
-//         tlBtn.style.Transform = tlHidden;
-//     }
-// };
+//         // trBtn.style.transform = tlHidden;
+//         // brBtn.style.transform = brHidden;
+//         // blBtn.style.transform = blActive;
+//         tlBtn.style.transform = tlHidden;
+//     t
+//t}t
 
 // brBtn.onclick = function(){
 //     if(activeCorner === "bottom-right"){
@@ -310,10 +310,10 @@ trBtn.onclick = function(){
 //         tlBtn.style.color = textColor;
 
 //         //Change positions of corner content
-//         // trBtn.style.Transform = tlHidden;
-//         // brBtn.style.Transform = brActive;
-//         // blBtn.style.Transform = blHidden;
-//         tlBtn.style.Transform = tlHidden;
+//         // trBtn.style.transform = tlHidden;
+//         // brBtn.style.transform = brActive;
+//         // blBtn.style.transform = blHidden;
+//         tlBtn.style.transform = tlHidden;
 //     }
 // };
 
