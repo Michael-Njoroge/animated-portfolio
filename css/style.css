@@ -167,3 +167,62 @@ article p{
     text-align: center;
     margin: 0 1rem;
 }
+
+/* Top right corner */
+
+#grid_tr_btn{
+    top: -11.5rem;
+    right: -11.5rem;
+    transform: rotate(45deg);
+}
+
+#grid_tr_content{
+    width: 30vw;
+    top: 10vh; 
+    right: 0;
+    /* transform: translateX(100vw) translateY(-100vh); */
+}
+
+.experience{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.experience_skills{
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem;
+    margin: 0;
+    gap: 0.2rem;
+    width: fit-content;
+}
+
+.experience_skills div{
+    display: flex;
+    align-items: center;
+    width: 13.5rem;
+}
+
+.experience_skills div img{
+    padding: 0;
+    margin-right: 0.5rem;
+}
+
+.experience_skills div h2{
+    text-align: left;
+}
+
+.experience_skills div p{
+    padding: 0;
+}
+
+.experience_skills div h2, .experience_skills div p{
+   font-size: 0.8rem;
+}
+
+.experience_skills div div{
+  justify-content: space-between;
+}
+
