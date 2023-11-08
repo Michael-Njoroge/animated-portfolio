@@ -42,12 +42,45 @@ let brHidden = "translateX(100vw) translateY(100vh)";
 let activeCorner = "";
 
 //Add an event listener to the window object to listen for the resize
-// window.addEventListener("resize",handleWindowResize);
+window.addEventListener("resize",handleWindowResize);
 
 //Function handling the styling when resizing the window
-// function handleWindowResize(){
-
-// }
+function handleWindowResize(){
+    switch (activeCorner){
+        case "top-left":
+            if(window.innerWidth <= 1100){
+                tlActive = "translateX(0) translateY(0)";
+                tlContent.style.transform = "translateX(0) translateY(0)";
+                tlContent.style.width = "100vw";
+                tlContent.style.height = "100vh";
+                tlContent.style.top = "0";
+                tlContent.style.display = "flex";
+                tlContent.style.alignItems = "center";
+                tlContent.style.justifyContent = "center";
+                tlContent.style.background = "var(--bg-transparent)";
+                tlContent.style.zIndex = "200";
+                tlBtn.style.zIndex = "300";
+                // trBtn.style.zIndex = "100";
+                // blBtn.style.zIndex = "100";
+                // brBtn.style.zIndex = "100";
+            }else{
+                tlActive = "translateX(5vw) translateY(0)";
+                tlContent.style.transform = "translateX(5vw) translateY(0)";
+                tlContent.style.width = "30vw";
+                tlContent.style.height = "0";
+                tlContent.style.top = "10vh";
+                tlContent.style.display = "block";
+            }
+            break;
+        case "top-right":
+            break;
+        case "bottom-left":
+            break;
+        case "bottom-right":
+            break;
+                
+    }
+}
 
 //Store the last reverse animation,ready to be played
 let lastReversedAnimation = "";
