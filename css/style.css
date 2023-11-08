@@ -242,11 +242,69 @@ article p{
     /* transform: translateX(-100vw) translateY(100vh); */
 }
 
+.project{
+    width: 100%;
+    flex-wrap: wrap;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin: auto auto 0.5rem;
+    border: var(--border);
+    background: var(--bg-alt);
+    display: flex;
+}
+
 .project_img{
     width: 100%;
 }
+
 .project_title{
     width: 100%;
+    margin: 0;
+    padding: 0.3rem;
+    font-size: 1rem;
 }
+
+button{
+    background: var(--btn);
+    color: var(--btn-text);
+    border-radius: 1rem;
+    padding: 0.5rem;
+    border: none;
+}
+
+.btn{
+    border-radius: 0;
+    height: 3rem;
+    flex-basis: 50%;
+    font-weight: 600;
+}
+
+.arrow{
+    border: var(--border);
+    width: 3rem;
+    height: 2rem;
+    margin: 0;
+    padding: 0.2rem 0;
+}
+
+.btn,
+.arrow{
+    background: rgb(245,245,245);
+    color: #333;
+    transition: all 300ms ease;
+}
+
+.btn:active,
+.arrow:active{
+    background: var(--bg-alt);
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover,
+.arrow:hover{
+    cursor: pointer;
+}
+
 
 
