@@ -100,8 +100,7 @@ h1,h2,h5,p{
 
 #grid_bl_btn,
 #grid_br_btn{
-    align-items: flex-end;
-    padding-top: 0.5rem;
+     padding-top: 0.5rem;
 }
 
 #grid_tl_btn:active,
@@ -238,12 +237,13 @@ article p{
 #grid_bl_content{
     width: 15rem;
     background-origin: 15vh;
+    bottom: 15vh;
     left: 0;
     /* transform: translateX(-100vw) translateY(100vh); */
 }
 
 .project{
-    width: 100%;
+    width: 70%;
     flex-wrap: wrap;
     border-radius: 2rem;
     overflow: hidden;
