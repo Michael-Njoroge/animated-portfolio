@@ -78,6 +78,8 @@ function handleWindowResize(){
             break;
         case "bottom-right":
             break;
+
+            default:
                 
     }
 }
@@ -105,14 +107,56 @@ function playAnimation(animation, reverseAnimation){
     }
 }
 
-// function playCloseAnimation(animation, reverseAnimation){
-    
-// }
+function playCloseAnimation(animation, reverseAnimation){
+    tlBtn.innerHTML = "About";
+    // trBtn.innerHTML = "Experience";
+    // blBtn.innerHTML = "Projects";
+    // brBtn.innerHTML = "Contact";
+
+    switch(activeCorner){
+        case "top-left":
+            tlBtn.style.background = bgColor;
+            tlBtn.style.color = textColor;
+            tlContent.style.transform = tlHidden;
+            break;
+            // case "top-right":
+            //     tlBtn.style.background = bgColor;
+            //     tlBtn.style.color = textColor;
+            //     tlContent.style.transform = tlHidden;
+            //     break;
+            //     case "bottom-left":
+            //         tlBtn.style.background = bgColor;
+            //         tlBtn.style.color = textColor;
+            //         tlContent.style.transform = tlHidden;
+            //         break;
+            //         case "bottom-right":
+            //             tlBtn.style.background = bgColor;
+            //             tlBtn.style.color = textColor;
+            //             tlContent.style.transform = tlHidden;
+            //             break;
+            //             case "top-left":
+            //                 tlBtn.style.background = bgColor;
+            //                 tlBtn.style.color = textColor;
+            //                 tlContent.style.transform = tlHidden;
+            //                 break;
+
+                            default:
+    }
+
+    heroImage.className = "";
+    lastReversedAnimation = "";
+    activeCorner = "";
+    heroImage.classList.add(reverseAnimation);
+    setTimeout(function(){
+        heroImage.classList.remove(reverseAnimation)
+    },200);
+
+}
 
 //onclick corner button function
 tlBtn.onclick = function(){
     if(activeCorner === "top-left"){
-        // playCloseAnimation("reverse-animate-top-left");
+        playCloseAnimation("reverse-animate-top-left");
     }else{
         // trBtn.innerHTML === "Experience";
         // blBtn.innerHTML === "Projects";
@@ -121,7 +165,7 @@ tlBtn.onclick = function(){
         activeCorner = "top-left";
         tlBtn.innerHTML = "&uarr;<br/>About";
 
-        // handleWindowResize();
+        handleWindowResize();
         playAnimation("animate-top-left","reverse-animate-top-left");
 
         //Change background colors
