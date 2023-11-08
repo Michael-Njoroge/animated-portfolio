@@ -229,3 +229,24 @@ article p{
 
 /* Bottom left corner */
 
+#grid_bl_btn{
+    bottom: -11.5rem;
+    left: -11.5rem;
+    transform: rotate(45deg);
+}
+
+#grid_bl_content{
+    width: 15rem;
+    background-origin: 15vh;
+    left: 0;
+    /* transform: translateX(-100vw) translateY(100vh); */
+}
+
+.project_img{
+    width: 100%;
+}
+.project_title{
+    width: 100%;
+}
+
+
