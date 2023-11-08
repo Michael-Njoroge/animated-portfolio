@@ -141,7 +141,7 @@ blBtn.onclick = function(){
 
         //Setting the active corner
         activeCorner = "bottom-left";
-        trBtn.innerHTML = "&uarr;<br/>Projects";
+        trBtn.innerHTML = "Projects<br/>&uarr";
 
         handleWindowResize();
         playAnimation("animate-bottom-left","reverse-animate-bottom-left");
@@ -176,7 +176,7 @@ brBtn.onclick = function(){
 
         //Setting the active corner
         activeCorner = "bottom-right";
-        trBtn.innerHTML = "&uarr;<br/>Contact";
+        trBtn.innerHTML = "Contact<br/>&uarr";
 
         handleWindowResize();
         playAnimation("animate-bottom-right","reverse-animate-bottom-right");
