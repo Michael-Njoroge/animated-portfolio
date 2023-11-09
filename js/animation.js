@@ -104,7 +104,7 @@ function handleWindowResize(){
                 blContent.style.transform = "translateX(0) translateY(0)";
                 blContent.style.width = "100vw";
                 blContent.style.height = "100vh";
-                blContent.style.top = "0";
+                blContent.style.top = "0"; 
                 blContent.style.display = "flex";
                 blContent.style.alignItems = "center";
                 blContent.style.justifyContent = "center";
@@ -114,11 +114,11 @@ function handleWindowResize(){
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
                 // brBtn.style.zIndex = "100";
-                projectOne.style.margin = "70%";
+                projectOne.style.width = "70%";
                 projectOne.style.margin = "auto auto 0.5rem";
-                projectTwo.style.margin = "70%";
+                projectTwo.style.width = "70%";
                 projectTwo.style.margin = "auto auto 0.5rem";
-                projectThree.style.margin = "70%";
+                projectThree.style.width = "70%";
                 projectThree.style.margin = "auto auto 0.5rem";
             }else if(window.innerWidth <= 1100){
                 blActive = "translateX(0) translateY(0)";
@@ -135,11 +135,11 @@ function handleWindowResize(){
                 tlBtn.style.zIndex = "100";
                 blBtn.style.zIndex = "300";
                 // brBtn.style.zIndex = "100";
-                projectOne.style.margin = "40%";
+                projectOne.style.width = "40%";
                 projectOne.style.margin = "auto auto 0.5rem";
-                projectTwo.style.margin = "40%";
+                projectTwo.style.width = "40%";
                 projectTwo.style.margin = "auto auto 0.5rem";
-                projectThree.style.margin = "40%";
+                projectThree.style.width = "40%";
                 projectThree.style.margin = "auto auto 0.5rem";
             }else{
                 blActive = "translateX(10vw) translateY(7vh)";
@@ -203,7 +203,7 @@ function playCloseAnimation(animation, reverseAnimation){
                 case "bottom-left":
                     blBtn.style.background = bgColor;
                     blBtn.style.color = textColor;
-                    blContent.style.transform = tlHidden;
+                    blContent.style.transform = blHidden;
                     break;
                     // case "bottom-right":
             //             tlBtn.style.background = bgColor;
