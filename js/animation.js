@@ -310,7 +310,7 @@ blBtn.onclick = function(){
 
         //Setting the active corner
         activeCorner = "bottom-left";
-        trBtn.innerHTML = "Projects<br/>&uarr";
+        blBtn.innerHTML = "Projects<br/>&darr;";
 
         handleWindowResize();
         playAnimation("animate-bottom-left","reverse-animate-bottom-left");
@@ -321,17 +321,17 @@ blBtn.onclick = function(){
         blBtn.style.background = bgColorAlt;
         tlBtn.style.background = bgColor;
 
-        // Change text clors
+        // Change text colors
         trBtn.style.color = textColor;
         // brBtn.style.color = textColor;
         blBtn.style.color = textColorAlt;
         tlBtn.style.color = textColor;
 
         //Change positions of corner content
-        trBtn.style.transform = tlHidden;
-        // brBtn.style.transform = brHidden;
-        blBtn.style.transform = blActive;
-        tlBtn.style.transform = tlHidden;
+        trContent.style.transform = tlHidden;
+        // brContent.style.transform = brHidden;
+        blContent.style.transform = blActive;
+        tlContent.style.transform = tlHidden;
 }
 };
 
