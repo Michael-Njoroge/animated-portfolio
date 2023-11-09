@@ -306,5 +306,33 @@ button{
     cursor: pointer;
 }
 
+/* Bottom right corner */
+#grid_br_btn{
+    bottom: -11.5rem;
+    right: -11.5rem;
+    transform: rotate(-45deg);
+}
+
+#grid_br_content{
+    bottom: 15vh;
+    right: 5vw;
+    /* transform: translateX(100vw) translateY(100vh); */
+}
+
+#grid_br_content div{
+    display: flex;
+    margin: 0.5rem auto;
+    gap: 1.2rem;
+    width: 17rem;
+}
+
+.contact-text{
+    color: var(--text);
+}
+
+.btn-contact{
+    border-radius: 2rem;
+    border: var(--border);
+}
 
 
