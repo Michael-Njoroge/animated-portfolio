@@ -109,7 +109,7 @@ h1,h2,h5,p{
 }
 
 #grid_bl_btn:active,
-#grid_br_btn:active{
+#grid_tr_btn:active{
     transform: rotate(45deg) scale(1.05);
 }
 
@@ -314,9 +314,9 @@ button{
 }
 
 #grid_br_content{
-    bottom: 15vh;
-    right: 5vw;
-    /* transform: translateX(100vw) translateY(100vh); */
+    bottom: 0;
+    right: 0;
+    transform: translateX(100vw) translateY(100vh);
 }
 
 #grid_br_content div{
